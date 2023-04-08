@@ -11,7 +11,9 @@
 
 import type { ApiFromModules } from "convex/api";
 import type * as listMessages from "../listMessages";
+import type * as listMessagesPaginated from "../listMessagesPaginated";
 import type * as sendMessage from "../sendMessage";
+import type * as writeArbitraryData from "../writeArbitraryData";
 
 /**
  * A type describing your app's public Convex API.
@@ -24,5 +26,7 @@ import type * as sendMessage from "../sendMessage";
  */
 export type API = ApiFromModules<{
   listMessages: typeof listMessages;
+  listMessagesPaginated: typeof listMessagesPaginated;
   sendMessage: typeof sendMessage;
+  writeArbitraryData: typeof writeArbitraryData;
 }>;
